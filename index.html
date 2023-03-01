@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta
+      http-equiv="Content-Type"
+      content="text/html; charset=utf-8"
+      charset="UTF-8"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuicyDuicy email template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      :root {
+        --black: #1f1f1f;
+        --grey: #575757;
+        --white: #ffffff;
+        --orange: #ff955f;
+        --yellow: #ffc764;
+        --pink: #ff577f;
+        --limit-margin: 1.5rem;
+      }
+
+      body {
+        background-color: var(--grey);
+        font-family: "Poppins", sans-serif;
+        /* padding-bottom: 2rem; */
+      }
+
+      /*--LOGO--*/
+      .logo {
+        width: fit-content;
+        font-size: 1.5rem;
+      }
+
+      .logo .word {
+        font-weight: 700;
+        line-height: 1em;
+        position: relative;
+      }
+
+      .logo .word:nth-child(2) {
+        margin-left: 0.4em;
+      }
+      /*-------------------------*/
+
+      .wrapper {
+        background-color: var(--black);
+        max-width: 700px;
+        margin-inline: auto;
+      }
+
+      h1 .logo {
+        font-size: clamp(4rem, 20vw, 8rem);
+        color: var(--black);
+      }
+
+      h1 .logo .word:nth-child(1):after {
+        content: "Juicy";
+      }
+
+      h1 .logo .word:nth-child(2):after {
+        content: "Duicy";
+      }
+
+      h1 .logo .word::after {
+        position: absolute;
+        color: transparent;
+        /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+          1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; */
+        -webkit-text-stroke: 1px var(--white);
+        left: -8px;
+        top: -8px;
+      }
+
+      .bg {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        height: 22rem;
+      }
+
+      .bg::after {
+        height: 17rem;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        top: 3.5rem;
+        background-image: linear-gradient(to right, var(--orange), var(--pink));
+        transform: skewY(15deg);
+      }
+
+      .bg h1 {
+        margin: auto;
+        position: relative;
+      }
+
+      .sub-word {
+        font-size: clamp(0.1rem, 3vw, 1.1rem);
+        position: absolute;
+        bottom: -12px;
+        left: 2em;
+        font-weight: 500;
+        color: var(--white);
+      }
+
+      .banner {
+        margin-top: 11rem;
+        background-color: var(--yellow);
+        padding: var(--limit-margin);
+        position: relative;
+        isolation: isolate;
+        padding-bottom: 5rem;
+        overflow: hidden;
+        /* box-shadow: 0px -5px red inset; */
+      }
+
+      .banner::after {
+        position: absolute;
+        content: "";
+        width: calc(100% + 60px);
+        height: 50px;
+        left: -30px;
+        top: 100%;
+        box-shadow: 0px -30px 30px var(--yellow);
+      }
+
+      .banner > div {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .banner img {
+        position: absolute;
+        z-index: -1;
+        bottom: -7rem;
+        right: -7rem;
+        width: 45rem;
+        opacity: 0.5;
+      }
+
+      h2 {
+        color: var(--white);
+        font-weight: 500;
+        font-size: clamp(1rem, 5vw, 1.6rem);
+      }
+
+      h2 span {
+        font-size: 1.2em;
+        font-family: "Lobster", cursive;
+        color: var(--pink);
+      }
+
+      .banner p {
+        margin-top: 0.5rem;
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+      }
+
+      .column {
+        margin-top: 2rem;
+        padding: var(--limit-margin);
+      }
+
+      .column-cell {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin-inline: auto;
+        gap: 0.3rem;
+      }
+
+      .column-cell > img {
+        width: 4rem;
+      }
+
+      .column-cell > h4 {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        font-weight: 400;
+        color: var(--white);
+      }
+
+      .column-cell + .column-cell {
+        margin-top: 1.2rem;
+      }
+
+      footer {
+        margin-top: 3.5rem;
+        padding-inline: var(--limit-margin);
+      }
+
+      footer section {
+        border-top: 1px solid var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 1.1rem 2rem;
+      }
+
+      footer section > div {
+        flex: 1;
+      }
+
+      .info-container .logo {
+        color: var(--orange);
+      }
+
+      .info-container p {
+        font-size: 0.7rem;
+        color: var(--white);
+        margin-top: 0.5rem;
+      }
+
+      .media-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+      }
+
+      .media-container img {
+        width: 2rem;
+        aspect-ratio: 1;
+      }
+
+      @media (max-width: 425px) {
+        .banner img {
+          display: none;
+        }
+
+        .column-cell {
+          flex-direction: column;
+          width: 15rem;
+          text-align: center;
+        }
+
+        footer section {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .info-container .logo {
+          margin-inline: auto;
+        }
+
+        .info-container p {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <div class="bg">
+          <h1>
+            <div class="logo">
+              <div class="word">Juicy</div>
+              <div class="word">Duicy</div>
+            </div>
+            <div class="sub-word">Juice it, till you lose it!</div>
+          </h1>
+        </div>
+      </main>
+      <section class="banner">
+        <div>
+          <h2>Juice up your day with our <span>flavorful</span> blends!</h2>
+          <p>
+            Savor the taste of sunshine in every sip with our vibrant and
+            nourishing juices, crafted from the freshest and most succulent
+            fruits and vegetables. From tangy citrus blends to luscious berry
+            smoothies, our juice shop offers an array of refreshing and
+            invigorating options to delight your senses and boost your energy.
+          </p>
+        </div>
+        <img src="./assets/pineapple.png" alt="pineapple" />
+      </section>
+      <section class="column">
+        <div class="column-cell">
+          <img src="./assets/fruit.png" alt="fruit" />
+          <h4>
+            Nature's candy: Fresh fruits bursting with flavor and nutrition!
+          </h4>
+        </div>
+        <div class="column-cell">
+          <img src="./assets/cup.png" alt="cup" />
+          <h4>
+            Sip into a world of flavor with every refreshing pour of our
+            signature drinks!
+          </h4>
+        </div>
+        <div class="column-cell">
+          <img src="./assets/sound.png" alt="sound" />
+          <h4>And yes, we got some amazing music waiting for you too.</h4>
+        </div>
+      </section>
+      <footer>
+        <section>
+          <div class="info-container">
+            <div class="logo">
+              <div class="word">Juicy</div>
+              <div class="word">Duicy</div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ulla
+            </p>
+          </div>
+          <div class="media-container">
+            <a href=""><img src="./assets/facebook.png" alt="facebook" /></a>
+            <a href=""><img src="./assets/instagram.png" alt="instagram" /></a>
+            <a href=""><img src="./assets/twitter.png" alt="twitter" /></a>
+            <a href=""><img src="./assets/whatsapp.png" alt="whatsapp" /></a>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
